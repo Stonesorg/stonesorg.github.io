@@ -9,7 +9,7 @@
     "serve": "node scripts/serve.mjs",
     "capture:site": "node scripts/capture-site.mjs",
     "simulate:traffic": "node scripts/simulate-traffic.mjs",
-    "test:e2e": "node --test tests/browser-flow.test.mjs"
+    "test:e2e": "node --test tests/v2-booking-flow.test.mjs"
   },
   "devDependencies": {
     "playwright": "^1.62.1"

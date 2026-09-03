@@ -1,11 +1,12 @@
 {
-  "generated_at": "2026-09-03T04:57:58.469Z",
+  "generated_at": "2026-09-03T07:53:17.886Z",
   "traffic_type": "simulated",
-  "local_site": "http://127.0.0.1:55431",
+  "local_site": "http://127.0.0.1:59976",
   "visitor_journeys": [
     {
-      "label": "Middle-school math booking",
+      "label": "Facebook middle-school math booking",
       "outcome": "booking confirmed",
+      "source": "facebook",
       "posthog_response_statuses": [
         200,
         200,
@@ -19,6 +20,7 @@
     {
       "label": "Elementary reading consideration",
       "outcome": "booking exited",
+      "source": "direct",
       "posthog_response_statuses": [
         200,
         200,
@@ -32,6 +34,7 @@
     {
       "label": "High-school science booking",
       "outcome": "booking confirmed",
+      "source": "facebook",
       "posthog_response_statuses": [
         200,
         200,
@@ -45,6 +48,7 @@
     {
       "label": "Algebra profile visit",
       "outcome": "profile viewed",
+      "source": "direct",
       "posthog_response_statuses": [
         200,
         200,
@@ -57,6 +61,7 @@
     }
   ],
   "expected_events": [
+    "site page viewed",
     "tutor filters applied",
     "tutor profile viewed",
     "booking started",
@@ -64,5 +69,5 @@
     "booking confirmed",
     "booking exited"
   ],
-  "dashboard_use": "Filter traffic_type to simulated when reviewing these demonstration sessions."
+  "dashboard_use": "Filter traffic_type to simulated. Break down source-aware cards by utm_source or referral_category to evaluate Facebook parents-group traffic."
 }

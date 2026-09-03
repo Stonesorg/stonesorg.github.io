@@ -19,14 +19,14 @@ PostHog will receive only these decision-useful events:
 
 | Event | Purpose | Key properties |
 | --- | --- | --- |
-| `tutor filters applied` | See demand by subject, grade, and format | subject, grade_band, format, results_count |
-| `tutor profile viewed` | Rank tutor interest | tutor_name, primary_subject, format |
-| `booking started` | Measure movement from interest to booking | tutor_name, primary_subject, format |
-| `time selected` | See whether available times meet demand | tutor_name, primary_subject, format, time_of_day |
-| `booking confirmed` | Measure completed bookings and conversion | tutor_name, primary_subject, format, rate |
-| `booking exited` | Explain booking drop-off without guessing | tutor_name, primary_subject, stage |
+| `tutor filters applied` | See demand by subject, grade, and format | requested_subject, grade_band, format, results_count |
+| `tutor profile viewed` | Rank tutor interest | tutor_name, offered_subject, format |
+| `booking started` | Measure movement from interest to booking | selected_tutor_id |
+| `time selected` | See whether available times meet demand | tutor_name, offered_subject, time_of_day |
+| `booking confirmed` | Measure completed bookings and conversion | tutor_name, offered_subject, requested_subject, format, rate |
+| `booking exited` | Explain booking drop-off without guessing | selected_tutor_id, stage |
 
-All events will include `traffic_type` (`live` or `simulated`) so the simulated traffic is distinguishable in reporting. No parent name, email, phone, or free-form booking note is captured.
+All events will include `traffic_type` (`live` or `simulated`), `referral_category`, and available `utm_source`, `utm_medium`, and `utm_campaign` properties so simulated traffic and Facebook-parent-group visits are distinguishable. No parent name, email, phone, student name, or free-form booking note is captured.
 
 ## Delivery plan and checks
 
@@ -42,3 +42,11 @@ All events will include `traffic_type` (`live` or `simulated`) so the simulated 
 
 - This is a GitHub Pages-compatible static prototype, not a payment or calendar integration.
 - Copy is written as ordinary family-facing website copy; no user-facing text mentions AI or an "AI prototype."
+
+## V2 demo plan — Dana's expanded brief
+
+The public demo will add a mobile-first home, tutor listing, tutor profile, and booking path; six representative profiles (four math, one science, one reading); a parent/student form; source-aware analytics; and clearer confirmation language.
+
+The browser demo will keep a selected slot unavailable on that browser and will render a booking confirmation. Parent name, email, and student details will never be sent to PostHog, written to a remote service, or persisted by the demo. The interface will state plainly that live bookings require a private backend before launch.
+
+For a live service, a server-side booking operation must atomically reserve an availability slot, store the booking in a private data store, and only then notify Dana and the parent. A future staff-only admin experience can manage tutor profiles and availability. The current analytics will add requested subject and UTM/referral properties to help evaluate Facebook-parent-group traffic and hiring demand without collecting family data.

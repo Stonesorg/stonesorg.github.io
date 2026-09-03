@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse ABC Tutoring’s math, science, and reading tutors.">
+    <title>Meet our tutors | ABC Tutoring</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/posthog-init.js"></script>
+  </head>
+  <body>
+    <header class="site-header"><a class="brand" href="index.html" aria-label="ABC Tutoring home"><span>ABC</span> Tutoring</a><nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="tutors.html" aria-current="page">Meet our tutors</a></nav></header>
+    <main>
+      <section class="page-intro"><p class="eyebrow">Meet the team</p><h1>Find the right fit.</h1><p>Start with the subject, grade level, or format that matters most. Every profile includes a clear rate and available times.</p></section>
+      <section class="directory" aria-label="Tutor listing">
+        <div class="section-heading"><div><h2>Available tutors</h2><p>Filter to narrow the list, then open a profile for the full picture.</p></div><p id="result-count" class="result-count" aria-live="polite"></p></div>
+        <form id="tutor-filters" class="filters" aria-label="Filter tutors"><label>Subject<select name="subject"><option value="all">All subjects</option><option value="Math">Math</option><option value="Science">Science</option><option value="Reading">Reading</option></select></label><label>Grade level<select name="grade"><option value="all">All grade levels</option><option value="K-5">K-5</option><option value="6-8">6-8</option><option value="9-12">9-12</option></select></label><label>Session format<select name="format"><option value="all">Online or in person</option><option value="online">Online</option><option value="in-person">In person</option></select></label><button id="reset-filters" class="text-button" type="button">Clear filters</button></form>
+        <div id="tutor-results" class="tutor-grid"></div>
+      </section>
+    </main>
+    <footer class="site-footer"><a class="brand" href="index.html"><span>ABC</span> Tutoring</a><p>Thoughtful support for growing learners.</p><p class="privacy-note">Tutor names and photos are representative. This booking experience is a demonstration and does not transmit or retain contact details; a private booking system is required before launch.</p></footer>
+    <script type="module" src="assets/js/tutors.js"></script>
+  </body>
+</html>
