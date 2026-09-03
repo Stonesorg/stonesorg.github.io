@@ -1,0 +1,17 @@
+{
+  "name": "abc-tutoring-prototype",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/booking-domain.test.mjs",
+    "check": "node scripts/check-site.mjs",
+    "verify": "npm run test && npm run check && npm run test:e2e",
+    "serve": "node scripts/serve.mjs",
+    "capture:site": "node scripts/capture-site.mjs",
+    "simulate:traffic": "node scripts/simulate-traffic.mjs",
+    "test:e2e": "node --test tests/browser-flow.test.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1"
+  }
+}

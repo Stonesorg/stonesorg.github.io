@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-09-03T04:57:58.469Z",
+  "traffic_type": "simulated",
+  "local_site": "http://127.0.0.1:55431",
+  "visitor_journeys": [
+    {
+      "label": "Middle-school math booking",
+      "outcome": "booking confirmed",
+      "posthog_response_statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    {
+      "label": "Elementary reading consideration",
+      "outcome": "booking exited",
+      "posthog_response_statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    {
+      "label": "High-school science booking",
+      "outcome": "booking confirmed",
+      "posthog_response_statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ]
+    },
+    {
+      "label": "Algebra profile visit",
+      "outcome": "profile viewed",
+      "posthog_response_statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ]
+    }
+  ],
+  "expected_events": [
+    "tutor filters applied",
+    "tutor profile viewed",
+    "booking started",
+    "time selected",
+    "booking confirmed",
+    "booking exited"
+  ],
+  "dashboard_use": "Filter traffic_type to simulated when reviewing these demonstration sessions."
+}

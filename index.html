@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find a warm, experienced tutor for K-12 math, science, and reading.">
+    <title>ABC Tutoring | A little more confidence, one session at a time</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script>
+      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split('.');2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement('script')).type='text/javascript',p.crossOrigin='anonymous',p.async=!0,p.src=s.api_host.replace('.i.posthog.com','-assets.i.posthog.com')+'/static/array.js',(r=t.getElementsByTagName('script')[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a='posthog',u.people=u.people||[],u.toString=function(t){var e='posthog';return'posthog'!==a&&(e+='.'+a),t||(e+=' (stub)'),e},u.people.toString=function(){return u.toString(1)+'.people (stub)'},o='init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetGroupPropertiesForFlags setGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug'.split(' '),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+      posthog.init('phc_txVivnwXGwZwbjotysrZw3zsvdWHRrWgLT78TbDYNrqK', {
+        api_host: 'https://us.i.posthog.com',
+        defaults: '2026-05-30',
+        autocapture: false,
+        person_profiles: 'identified_only',
+      });
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="ABC Tutoring home"><span>ABC</span> Tutoring</a>
+      <a class="header-link" href="#find-your-tutor">Meet our tutors</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">K-12 tutoring, made personal</p>
+          <h1 id="hero-title">A little more confidence, one session at a time.</h1>
+          <p class="hero-intro">Warm, experienced support in math, science, and reading - online or in person.</p>
+          <button id="find-a-tutor" class="button button-primary" type="button">Find a tutor</button>
+        </div>
+        <div class="hero-note" aria-label="What families can expect">
+          <div class="hero-note-icon" aria-hidden="true">✓</div>
+          <p><strong>One simple place to start.</strong> Browse tutors, see their available times, and reserve a 60-minute session when it works for your family.</p>
+        </div>
+      </section>
+
+      <section id="find-your-tutor" class="directory" aria-labelledby="directory-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Meet the team</p>
+            <h2 id="directory-title">Find the right fit.</h2>
+            <p>Start with the subject, grade level, or format that matters most.</p>
+          </div>
+          <p id="result-count" class="result-count" aria-live="polite"></p>
+        </div>
+
+        <form id="tutor-filters" class="filters" aria-label="Filter tutors">
+          <label>Subject
+            <select name="subject">
+              <option value="all">All subjects</option>
+              <option value="Math">Math</option>
+              <option value="Science">Science</option>
+              <option value="Reading">Reading</option>
+            </select>
+          </label>
+          <label>Grade level
+            <select name="grade">
+              <option value="all">All grade levels</option>
+              <option value="K-5">K-5</option>
+              <option value="6-8">6-8</option>
+              <option value="9-12">9-12</option>
+            </select>
+          </label>
+          <label>Session format
+            <select name="format">
+              <option value="all">Online or in person</option>
+              <option value="online">Online</option>
+              <option value="in-person">In person</option>
+            </select>
+          </label>
+          <button id="reset-filters" class="text-button" type="button">Clear filters</button>
+        </form>
+
+        <div id="tutor-results" class="tutor-grid"></div>
+      </section>
+
+      <section class="how-it-works" aria-labelledby="how-title">
+        <p class="eyebrow">A straightforward start</p>
+        <h2 id="how-title">Choose with confidence.</h2>
+        <ol>
+          <li><span>01</span><strong>Find a tutor</strong><p>Explore subject strengths, grade levels, and learning style.</p></li>
+          <li><span>02</span><strong>Choose a time</strong><p>See available 60-minute sessions before you reserve.</p></li>
+          <li><span>03</span><strong>Feel prepared</strong><p>Get a clear confirmation with the tutor, date, and time.</p></li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="#top"><span>ABC</span> Tutoring</a>
+      <p>Thoughtful support for growing learners.</p>
+      <p class="privacy-note">We use anonymous activity data to improve how families find a tutor. We do not send booking contact details to our analytics.</p>
+    </footer>
+
+    <dialog id="profile-dialog" aria-labelledby="profile-title"><div id="profile-dialog-content"></div></dialog>
+    <dialog id="booking-dialog" aria-labelledby="booking-title"><div id="booking-dialog-content"></div></dialog>
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
+</html>
