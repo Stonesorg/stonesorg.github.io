@@ -2,16 +2,17 @@
 
 ## Access
 
-No saved or shared dashboard exists yet. Sign in to PostHog at <https://us.posthog.com/login?next=/project/591454/dashboard>, then create a dashboard named **ABC Tutoring - Demo** in project 591454.
+The project dashboard is [ABC Tutoring - Demo](https://us.posthog.com/project/591454/dashboard/2060822) in PostHog project 591454. It is deliberately a project dashboard, rather than a public analytics link, so a PostHog sign-in is required.
 
-The prototype can send events to PostHog, but an ingestion token cannot create or share dashboards.
-
-## Four cards for Dana
+## Live cards for Dana
 
 1. **Tutor attention** - Trend of `tutor profile viewed`, broken down by `tutor_name`. This shows which tutor profiles draw interest.
-2. **Booking journey** - Funnel: `tutor profile viewed` → `booking started` → `time selected` → `booking confirmed`. Break down by `offered_subject` or `tutor_name` to see where families leave.
-3. **Subjects families seek** - Trend of `tutor filters applied`, broken down by `requested_subject`; compare it with `booking confirmed` broken down by the same property. This is the hiring signal Dana asked for.
-4. **Facebook parents' group** - Trend of `booking confirmed` filtered to `utm_source = facebook`, with a breakdown by `utm_campaign`. Link Facebook posts with `?utm_source=facebook&utm_medium=social&utm_campaign=parents-group`.
+2. **Booking journey** - Funnel: `tutor profile viewed` → `booking started` → `time selected` → `booking confirmed`. It makes the point where families leave visible without collecting their form details.
+3. **Subjects families seek** - Trend of `tutor filters applied`, broken down by `requested_subject`. This is the hiring signal Dana asked for.
+
+## Referral tracking
+
+The site records `utm_source`, `utm_medium`, `utm_campaign`, and a simplified `referral_category` on intentional events. Link Facebook posts with `?utm_source=facebook&utm_medium=social&utm_campaign=parents-group`; those visits can be compared in PostHog once live browser sessions begin arriving. The bundled traffic simulation sends direct event batches, so it is intentionally not used to demonstrate session-level referral attribution.
 
 ## Demo data and privacy
 
