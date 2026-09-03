@@ -2,13 +2,15 @@
 
 ## Access
 
-The project dashboard is [ABC Tutoring - Demo](https://us.posthog.com/project/591454/dashboard/2060822) in PostHog project 591454. It is deliberately a project dashboard, rather than a public analytics link, so a PostHog sign-in is required.
+The [ABC Tutoring - Demo](https://us.posthog.com/project/591454/dashboard/2060822) dashboard is configured with a public share link. It contains only aggregate, non-PII demonstration metrics. Before production, review **Manage sharing** in PostHog and restrict access to the team unless a public dashboard is specifically wanted.
 
 ## Live cards for Dana
 
 1. **Tutor attention** - Trend of `tutor profile viewed`, broken down by `tutor_name`. This shows which tutor profiles draw interest.
 2. **Booking journey** - Funnel: `tutor profile viewed` → `booking started` → `time selected` → `booking confirmed`. It makes the point where families leave visible without collecting their form details.
 3. **Subjects families seek** - Trend of `tutor filters applied`, broken down by `requested_subject`. This is the hiring signal Dana asked for.
+
+Each card and the dashboard itself include a plain-language description of the question it answers, how to interpret the demo sample, and the decision it can support.
 
 ## Referral tracking
 
